@@ -3,7 +3,7 @@ CREATE TABLE album (
     nome			varchar(40) NOT NULL,
     pais			varchar(40) NOT NULL,
     descricao		text,
-    avaliacao		float,
+    avaliacao		numeric,
     capa			text,
     data_publicacao	date NOT NULL CHECK ((data_publicacao >= '1889-01-01') AND (data_publicacao <= CURRENT_DATE)),
     genero1			varchar(40) NOT NULL,
