@@ -81,7 +81,7 @@ $func$ LANGUAGE plpgsql;
 
 CREATE OR REPLACE FUNCTION sales_by_label() RETURNS
 TABLE (
-	qtd_total	int
+	qtd_total	numeric
 )
 AS 
 $func$
@@ -91,9 +91,9 @@ BEGIN
 END
 $func$ LANGUAGE plpgsql;
 
---RD8: Informar a avaliação média de uma determinada banda
+--RD8: Informar a avaliação média de por banda
 
-CREATE OR REPLACE FUNCTION avg_rating_band(banda int) RETURNS
+CREATE OR REPLACE FUNCTION avg_rating_band() RETURNS
 TABLE (
 	media numeric
 )
@@ -101,7 +101,7 @@ AS
 $func$
 BEGIN
 	RETURN QUERY
-    SELECT AVG(tf.avaliacao) FROM (album NATURAL JOIN (SELECT cod_album FROM gravacao WHERE cod_banda = banda) as t1) as tf;
+    SELECT AVG(tf.avaliacao) FROM (album NATURAL JOIN gravacao) AS tf GROUP BY tf.cod_banda;
 END
 $func$ LANGUAGE plpgsql;
 
