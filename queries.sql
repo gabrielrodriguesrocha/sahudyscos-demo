@@ -30,7 +30,41 @@ $func$ LANGUAGE plpgsql;
 
 --RD3.1: Retornar a versão de álbum com o maior preço de determinada banda
 
+CREATE OR REPLACE FUNCTION most_expensive_version(banda int) RETURNS
+TABLE (
+    cod_barras	bigint,
+    nome		varchar(40),
+    preco		numeric
+)
+AS 
+$func$
+BEGIN
+	RETURN QUERY
+    WITH t1 AS (SELECT versao.cod_barras, gravacao.cod_album, versao.preco FROM gravacao NATURAL JOIN versao WHERE cod_banda = banda)
+    SELECT tf.cod_barras, tf.nome, tf.preco FROM
+       (t1 NATURAL JOIN (SELECT MAX(t1.preco) as preco FROM t1) as t2 NATURAL JOIN album)
+    as tf;
+END
+$func$ LANGUAGE plpgsql;
+
 --RD3.2: Retornar a versão de álbum com o maior preço de determinada banda
+
+CREATE OR REPLACE FUNCTION most_expensive_version(banda int) RETURNS
+TABLE (
+    cod_barras	bigint,
+    nome		varchar(40),
+    preco		numeric
+)
+AS 
+$func$
+BEGIN
+	RETURN QUERY
+    WITH t1 AS (SELECT versao.cod_barras, gravacao.cod_album, versao.preco FROM gravacao NATURAL JOIN versao WHERE cod_banda = banda)
+    SELECT tf.cod_barras, tf.nome, tf.preco FROM
+       (t1 NATURAL JOIN (SELECT MIN(t1.preco) as preco FROM t1) as t2 NATURAL JOIN album)
+    as tf;
+END
+$func$ LANGUAGE plpgsql;
 
 --RD4: Retornar versões de um determinado álbum que estão em promoção na semana corrente
 
@@ -91,17 +125,18 @@ BEGIN
 END
 $func$ LANGUAGE plpgsql;
 
---RD8: Informar a avaliação média de por banda
+--RD8: Informar a avaliação média por banda
 
 CREATE OR REPLACE FUNCTION avg_rating_band() RETURNS
 TABLE (
-	media numeric
+    cod_banda 	bigint,
+	media 		numeric
 )
 AS 
 $func$
 BEGIN
 	RETURN QUERY
-    SELECT AVG(tf.avaliacao) FROM (album NATURAL JOIN gravacao) AS tf GROUP BY tf.cod_banda;
+    SELECT tf.cod_banda, AVG(tf.avaliacao) as media FROM (album NATURAL JOIN gravacao) AS tf GROUP BY tf.cod_banda ORDER BY media DESC;
 END
 $func$ LANGUAGE plpgsql;
 
@@ -136,3 +171,4 @@ BEGIN
     SELECT cod_album, nome, descricao FROM album WHERE data_publicacao >= de AND data_publicacao <= ate;
 END
 $func$ LANGUAGE plpgsql;
+
