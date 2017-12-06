@@ -6,3 +6,5 @@ INSERT INTO gravadora(nome, email, data_fundacao, genero1, telefone1) VALUES
 			('Bizarre Records', 'dead@label.com', '1968-01-01', 'Experimental', '+55000000');
 INSERT INTO gravadora(nome, email, data_fundacao, genero1, genero2, telefone1) VALUES
 			('Parlophone', 'keith.wozencroft@emimusic.com', '1896-01-01', 'Pop', 'Early', '+02076055000');
+INSERT INTO gravadora(nome, email, data_fundacao, genero1, genero2, telefone1) VALUES
+			('Harvest', 'contact@harvestrecords.com', '1969-01-01', 'Progressive', 'Indie', '+02076055000');

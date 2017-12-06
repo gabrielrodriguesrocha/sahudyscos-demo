@@ -41,15 +41,13 @@ $func$
 BEGIN
 	RETURN QUERY
     WITH t1 AS (SELECT versao.cod_barras, gravacao.cod_album, versao.preco FROM gravacao NATURAL JOIN versao WHERE cod_banda = banda)
-    SELECT tf.cod_barras, tf.nome, tf.preco FROM
-       (t1 NATURAL JOIN (SELECT MAX(t1.preco) as preco FROM t1) as t2 NATURAL JOIN album)
-    as tf;
+    SELECT tf.cod_barras, tf.nome, tf.preco FROM (t1 NATURAL JOIN album) AS tf WHERE tf.preco = (SELECT MAX(t1.preco) FROM t1);
 END
 $func$ LANGUAGE plpgsql;
 
 --RD3.2: Retornar a versão de álbum com o maior preço de determinada banda
 
-CREATE OR REPLACE FUNCTION most_expensive_version(banda int) RETURNS
+CREATE OR REPLACE FUNCTION cheapest_version(banda int) RETURNS
 TABLE (
     cod_barras	bigint,
     nome		varchar(40),
@@ -60,9 +58,7 @@ $func$
 BEGIN
 	RETURN QUERY
     WITH t1 AS (SELECT versao.cod_barras, gravacao.cod_album, versao.preco FROM gravacao NATURAL JOIN versao WHERE cod_banda = banda)
-    SELECT tf.cod_barras, tf.nome, tf.preco FROM
-       (t1 NATURAL JOIN (SELECT MIN(t1.preco) as preco FROM t1) as t2 NATURAL JOIN album)
-    as tf;
+    SELECT tf.cod_barras, tf.nome, tf.preco FROM (t1 NATURAL JOIN album) AS tf WHERE tf.preco = (SELECT MIN(t1.preco) FROM t1);
 END
 $func$ LANGUAGE plpgsql;
 

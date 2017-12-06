@@ -32,8 +32,8 @@ CREATE TABLE gravadora (
 
 CREATE TABLE versao (
     cod_barras		bigint NOT NULL,
-    cod_album		bigint NOT NULL REFERENCES album(cod_album),
-    cod_gravadora	bigint NOT NULL REFERENCES gravadora(cod_identificacao),
+    cod_album		bigint NOT NULL,
+    cod_gravadora	bigint NOT NULL ,
     formato			varchar(15) NOT NULL CHECK (formato = 'vinil' OR formato = 'cassete' OR formato = 'cd'),
     tipo_versao		varchar(20) NOT NULL CHECK (tipo_versao = 'original' OR tipo_versao = 'remasterizada' OR tipo_versao = 'aniversário'),
     preco			numeric NOT NULL CHECK (preco >= 0),
@@ -41,18 +41,24 @@ CREATE TABLE versao (
     qtd_disponivel	bigint NOT NULL CHECK (qtd_disponivel >= 0),
     promocao		boolean NOT NULL,
     data_lancamento date NOT NULL CHECK ((data_lancamento >= '1889-01-01') AND (data_lancamento <= CURRENT_DATE)),
-    PRIMARY KEY (cod_barras, cod_album)
+    PRIMARY KEY (cod_barras, cod_album),
+    FOREIGN KEY (cod_album) REFERENCES album(cod_album) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (cod_gravadora) REFERENCES gravadora(cod_identificacao) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE gravacao (
-    cod_album 	bigint NOT NULL REFERENCES album(cod_album),
-    cod_banda 	bigint NOT NULL REFERENCES banda(cod_banda),
-    PRIMARY KEY (cod_album, cod_banda)
+    cod_album 	bigint NOT NULL,
+    cod_banda 	bigint NOT NULL,
+    PRIMARY KEY (cod_album, cod_banda),
+    FOREIGN KEY (cod_album) REFERENCES album(cod_album),
+    FOREIGN KEY (cod_banda) REFERENCES banda(cod_banda)
 );
 
 CREATE TABLE contrato (
-    cod_banda 		bigint NOT NULL REFERENCES banda(cod_banda),
-    cod_gravadora	bigint NOT NULL REFERENCES gravadora(cod_identificacao),
-    PRIMARY KEY (cod_banda, cod_gravadora)
+    cod_banda 		bigint NOT NULL,
+    cod_gravadora	bigint NOT NULL,
+    PRIMARY KEY (cod_banda, cod_gravadora),
+    FOREIGN KEY (cod_banda) REFERENCES banda(cod_banda),
+    FOREIGN KEY (cod_gravadora) REFERENCES gravadora(cod_identificacao)
 );
 
