@@ -44,3 +44,15 @@ INSERT INTO versao VALUES
 			(509974765812900, 19, 1, 'cd', 'original', 70.0, 1, 1, TRUE, '1994-01-01');
 INSERT INTO versao VALUES
 			(888750078810000, 20, 1, 'vinil', 'original', 80.0, 10, 30, FALSE, '2014-01-01');
+INSERT INTO versao VALUES
+			(189740034670000, 21, 2, 'cd', 'original', 55.0, 15, 40, FALSE, '2004-09-20');
+INSERT INTO versao VALUES
+			(237847113580403, 21, 2, 'cd', 'aniversário', 80.0, 5, 20, FALSE, '2005-10-22');
+INSERT INTO versao VALUES
+			(115487862100043, 22, 2, 'vinil', 'original', 140.0, 2, 5, FALSE, '1975-02-24');
+INSERT INTO versao VALUES
+			(658431778950000, 23, 3, 'vinil', 'remasterizada', 70.0, 0, 2, FALSE, '1980-07-25');
+INSERT INTO versao VALUES
+			(248764757003487, 24, 2, 'cd', 'aniversário', 40.0, 10, 10, TRUE, '2014-04-22');
+INSERT INTO versao VALUES
+			 (11887643480000, 25, 4, 'cd', 'original', 35.0, 5, 15, FALSE, '2014-05-16');
