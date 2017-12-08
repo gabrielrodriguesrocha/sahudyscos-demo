@@ -50,15 +50,15 @@ CREATE TABLE gravacao (
     cod_album 	bigint NOT NULL,
     cod_banda 	bigint NOT NULL,
     PRIMARY KEY (cod_album, cod_banda),
-    FOREIGN KEY (cod_album) REFERENCES album(cod_album),
-    FOREIGN KEY (cod_banda) REFERENCES banda(cod_banda)
+    FOREIGN KEY (cod_album) REFERENCES album(cod_album) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (cod_banda) REFERENCES banda(cod_banda) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE contrato (
     cod_banda 		bigint NOT NULL,
     cod_gravadora	bigint NOT NULL,
     PRIMARY KEY (cod_banda, cod_gravadora),
-    FOREIGN KEY (cod_banda) REFERENCES banda(cod_banda),
-    FOREIGN KEY (cod_gravadora) REFERENCES gravadora(cod_identificacao)
+    FOREIGN KEY (cod_banda) REFERENCES banda(cod_banda) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (cod_gravadora) REFERENCES gravadora(cod_identificacao) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
