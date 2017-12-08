@@ -40,3 +40,13 @@ INSERT INTO gravacao VALUES
 			(19, 2);
 INSERT INTO gravacao VALUES
 			(20, 2);
+INSERT INTO gravacao VALUES
+			(21, 8);
+INSERT INTO gravacao VALUES
+			(22, 9);
+INSERT INTO gravacao VALUES
+			(23, 10);
+INSERT INTO gravacao VALUES
+			(24, 11);
+INSERT INTO gravacao VALUES
+			(25, 12);
