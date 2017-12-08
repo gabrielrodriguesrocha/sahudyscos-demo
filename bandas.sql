@@ -12,3 +12,13 @@ INSERT INTO  banda(nome, data_fundacao, descricao, genero1) VALUES
 			('Metallica', '1981-01-01', 'Metallica is an American heavy metal band from Los Angeles, California. The band was formed in 1981 by drummer Lars Ulrich and vocalist/guitarist James Hetfield. The band''s fast tempos, instrumentals and aggressive musicianship made them one of the founding "big four" bands of thrash metal, alongside Megadeth, Anthrax and Slayer.', 'Metal');
 INSERT INTO banda(nome, data_fundacao, descricao, genero1, genero2) VALUES
 			('Lou Reed', '1942-03-02', 'Lewis Allan Reed (March 2, 1942 – October 27, 2013) was an American musician, singer and songwriter. He was the guitarist, singer, and principal songwriter for the rock band the Velvet Underground, with a solo career that spanned five decades.', 'Rock', 'Experimental');
+INSERT INTO banda(nome, data_fundacao, descricao, genero1, genero2) VALUES
+			('Green Day', '1987-10-17', 'Green Day is an American punk rock band formed in 1986 by lead vocalist and guitarist Billie Joe Armstrong and bassist Mike Dirnt.', 'Punk', 'Rock');
+INSERT INTO banda(nome, data_fundacao, descricao, genero1, genero2) VALUES
+			('Led Zeppelin', '1968-10-04', 'Led Zeppelin were an English rock band formed in London in 1968. The group consisted of guitarist Jimmy Page, singer Robert Plant, bassist and keyboardist John Paul Jones, and drummer John Bonham.', 'Rock', 'Metal');
+INSERT INTO banda(nome, data_fundacao, descricao, genero1, genero2) VALUES
+			('AC/DC', '1973-12-31', 'AC/DC are an Australian rock band, formed in Sydney in 1973 by brothers Malcolm and Angus Young. A hard rock/blues rock band, they have also been considered a heavy metal band.', 'Rock', 'Metal');
+INSERT INTO banda(nome, data_fundacao, descricao, genero1, genero2) VALUES
+			('Simple Plan', '1999-09-10', 'Simple Plan is a Canadian rock band from Montreal, Quebec. Simple Plan''s style of music has been described as emo, pop punk, alternative rock, pop rock, punk rock, and power pop', 'Rock', 'Pop');
+INSERT INTO banda(nome, data_fundacao, descricao, genero1, genero2) VALUES
+			('Coldplay', '1996-09-23', 'Coldplay are a British rock band formed in 1996 by lead vocalist and keyboardist Chris Martin and lead guitarist Jonny Buckland at University College London (UCL).', 'Rock', 'Pop');
