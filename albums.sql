@@ -43,11 +43,11 @@ INSERT INTO album(nome, pais, descricao, avaliacao, capa, data_publicacao, gener
 INSERT INTO album(nome, pais, descricao, avaliacao, capa, data_publicacao, genero1, genero2) VALUES
 			('Physical Graffiti', 'US', 'Physical Graffiti is the sixth studio album by the English rock band Led Zeppelin, released as a double album on 24 February 1975 by their newly founded imprint label Swan Song Records.', 4.8, 'https://upload.wikimedia.org/wikipedia/en/e/e3/Led_Zeppelin_-_Physical_Graffiti.jpg', '1975-02-24', 'Rock', 'Progressive');
 INSERT INTO album(nome, pais, descricao, avaliacao, capa, data_publicacao, genero1, genero2) VALUES
-			('Black in Black', 'Australia', 'Back in Black is the seventh studio album by Australian rock band AC/DC. Produced by Robert John "Mutt" Lange, the album was released on 25 July 1980 by Albert Productions and Atlantic Records.', 4.1, 'https://upload.wikimedia.org/wikipedia/pt/b/b6/Back_in_Black.jpg', 'Hard Rock');
+			('Back in Black', 'Australia', 'Back in Black is the seventh studio album by Australian rock band AC/DC. Produced by Robert John "Mutt" Lange, the album was released on 25 July 1980 by Albert Productions and Atlantic Records.', 4.1, 'https://upload.wikimedia.org/wikipedia/pt/b/b6/Back_in_Black.jpg', '1980-07-25', 'Hard Rock');
 INSERT INTO album(nome, pais, descricao, avaliacao, capa, data_publicacao, genero1, genero2) VALUES
-			('Still Not Getting Any...', 'Canada', 'Still Not Getting Any... is the second studio album by Canadian rock band Simple Plan. It was released on October 26, 2004 by Lava Records.', 3.7, 'https://upload.wikimedia.org/wikipedia/pt/1/12/StillNotGettingAny.jpg', 'Pop', 'Rock');
+			('Still Not Getting Any...', 'Canada', 'Still Not Getting Any... is the second studio album by Canadian rock band Simple Plan. It was released on October 26, 2004 by Lava Records.', 3.7, 'https://upload.wikimedia.org/wikipedia/pt/1/12/StillNotGettingAny.jpg', '2004-10-26', 'Pop', 'Rock');
 INSERT INTO album(nome, pais, descricao, avaliacao, capa, data_publicacao, genero1, genero2) VALUES
-			('Ghost Stories', 'US', 'Ghost Stories is the sixth studio album by British rock band Coldplay. Co-produced by the band with Paul Epworth along with returning Mylo Xyloto producers Daniel Green and Rik Simpson, it was released by Parlophone on 16 May 2014.', 4.2, 'https://upload.wikimedia.org/wikipedia/en/8/8a/Coldplay_-_Ghost_Stories.png', 'Pop', 'Electronic');
+			('Ghost Stories', 'US', 'Ghost Stories is the sixth studio album by British rock band Coldplay. Co-produced by the band with Paul Epworth along with returning Mylo Xyloto producers Daniel Green and Rik Simpson, it was released by Parlophone on 16 May 2014.', 4.2, 'https://upload.wikimedia.org/wikipedia/en/8/8a/Coldplay_-_Ghost_Stories.png', '2014-05-16', 'Pop', 'Electronic');
 			
 			
 			
