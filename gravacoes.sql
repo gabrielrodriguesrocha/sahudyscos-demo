@@ -1,4 +1,4 @@
-INSERT INTO gravacao VALUES
+﻿INSERT INTO gravacao VALUES
 (1,1);
 INSERT INTO gravacao VALUES
 (2,5);
@@ -50,3 +50,33 @@ INSERT INTO gravacao VALUES
 (24, 11);
 INSERT INTO gravacao VALUES
 (25, 12);
+INSERT INTO gravacao VALUES
+(52, 6);
+INSERT INTO gravacao VALUES
+(53, 6);
+INSERT INTO gravacao VALUES
+(54, 6);
+INSERT INTO gravacao VALUES
+(55, 6);
+INSERT INTO gravacao VALUES
+(56, 6);
+INSERT INTO gravacao VALUES
+(57, 6);
+INSERT INTO gravacao VALUES
+(58, 6);
+INSERT INTO gravacao VALUES
+(59, 6);
+INSERT INTO gravacao VALUES
+(60, 6);
+INSERT INTO gravacao VALUES
+(61, 6);
+INSERT INTO gravacao VALUES
+(62, 6);
+INSERT INTO gravacao VALUES
+(63, 6);
+INSERT INTO gravacao VALUES
+(64, 6);
+INSERT INTO gravacao VALUES
+(65, 6);
+INSERT INTO gravacao VALUES
+(66, 6);

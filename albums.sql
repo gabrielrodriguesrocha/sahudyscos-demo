@@ -1,4 +1,4 @@
-INSERT INTO album(nome, pais, descricao, avaliacao, capa, data_publicacao, genero1) VALUES
+﻿INSERT INTO album(nome, pais, descricao, avaliacao, capa, data_publicacao, genero1) VALUES
 ('Concert By The Sea', 'US', 'Concert by the Sea is a live album by pianist Erroll Garner, released on Columbia Records in 1956. It sold over a million dollars worth of retail copies by 1958, thereby qualifying for gold record status by the definition of that time, but has never been acknowledged as such by the RIAA.', 4.07, 'https://img.discogs.com/_j_so4lZL7Gl60Y5mVOU3OsCgZI=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-636663-1345000392-1744.jpeg.jpg', '1956-10-13', 'Jazz');
 INSERT INTO album(nome, pais, descricao, avaliacao, capa, data_publicacao, genero1, genero2) VALUES
 ('Hot Rats', 'US', 'Hot Rats is the second solo album by Frank Zappa. This is the first Zappa album on which Dweezil has a credit. Both (he and the album) pretty much came into the world together.',  4.59, 'https://img.discogs.com/OK9dDmCAPSKb5E2mmbHEOhPT5n8=/fit-in/600x598/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-584013-1444143009-3942.jpeg.jpg', '1969-10-10', 'Jazz', 'Rock');
@@ -48,6 +48,35 @@ INSERT INTO album(nome, pais, descricao, avaliacao, capa, data_publicacao, gener
 ('Still Not Getting Any...', 'Canada', 'Still Not Getting Any... is the second studio album by Canadian rock band Simple Plan. It was released on October 26, 2004 by Lava Records.', 3.7, 'https://upload.wikimedia.org/wikipedia/pt/1/12/StillNotGettingAny.jpg', '2004-10-26', 'Pop', 'Rock');
 INSERT INTO album(nome, pais, descricao, avaliacao, capa, data_publicacao, genero1, genero2) VALUES
 ('Ghost Stories', 'US', 'Ghost Stories is the sixth studio album by British rock band Coldplay. Co-produced by the band with Paul Epworth along with returning Mylo Xyloto producers Daniel Green and Rik Simpson, it was released by Parlophone on 16 May 2014.', 4.2, 'https://upload.wikimedia.org/wikipedia/en/8/8a/Coldplay_-_Ghost_Stories.png', '2014-05-16', 'Pop', 'Electronic');
-
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('Kill Em All', 'US', 4.52, '1983-01-01', 'Metal');
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('Ride The Lightning', 'US', 4.62, '1984-01-01', 'Metal'); 
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('Master of Puppets', 'US', 4.63, '1986-01-01', 'Metal');
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('...And Justice For All', 'US', 4.47, '1988-01-01', 'Metal');
+INSERT INTO album(nome, pais,descricao, avaliacao, data_publicacao, genero1) VALUES
+	('Metallica', 'US','Released on 12 Aug, 1991 by Elektra Records, commonly known as.. the Black Album, it became the bands best-selling album, certified 16× platinum by Riaa in 2012, and has sold over 16.000.000 copies in the United States. The snake in the artwork as well as the track "Dont tread on me" were inspired by a historical American flag, The Gadsden flag, which was designed in 1775. The cover is almost black, James Hetfield said "It was a simple black cover and you had to listen to the music. You wouldn’t be distracted by a drawing on the front." It is the album that shifted the band from Thrash to Heavy, also it attracted people to Metal that had little or anything to do with Metallica or Metal before in their life; but also vice versa for many of the ones that did.', 4.35, '1984-08-12', 'Metal');
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('Live Shit: Binge & Purge', 'US', 4.59, '1993-01-01', 'Metal');
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('Load', 'US', 3.92, '1996-01-01', 'Metal');
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('Reload', 'US', 3.78, '1997-01-01', 'Metal');
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('S&M', 'US', 4.03, '1999-01-01', 'Metal');
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('St. Anger', 'US', 3.54, '2003-01-01', 'Metal');
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('Death Magnetic', 'US', 4.0, '2008-01-01', 'Metal');
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('Quebec Magnetic', 'US', 4.45, '2012-01-01', 'Metal');
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('Through The Never', 'US', 4.29, '2013-01-01', 'Metal');
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('Liberté, Égalité, Fraternité, Metallica!', 'US', 4.16, '2016-01-01', 'Metal');
+INSERT INTO album(nome, pais, avaliacao, data_publicacao, genero1) VALUES
+	('Hardwired...To Self-Destruct', 'US', 4.31, '2016-01-01', 'Metal');
 
 
